@@ -39,8 +39,8 @@ function App() {
   });
 
   return (
-    <div style={{ padding: 20, fontFamily: "Arial, sans-serif" }}>
-      <h1>Product Catalog</h1>
+    <div style={{ padding: 20, fontFamily: "Papyrus" }}>
+      <h1 style={ {textDecoration: "underline", fontSize: 40}}>Product Catalog</h1>
 
       <div style={{ marginBottom: 16 }}>
         <input
@@ -49,15 +49,15 @@ function App() {
           value={searchQuery}
           onChange={handleSearchChange}
           style={{
+            width: 203,
             padding: 8,
-            width: 300,
-            border: "1px solid #ccc",
-            borderRadius: 6,
+            border: "1px solid blue",
+            borderRadius: 5
           }}
         />
         <button
           onClick={clearSearch}
-          style={{ marginLeft: 8, padding: "8px 10px" }}
+          style={{ marginLeft: 8, padding: "8px 10px", border: " 1px solid red", borderRadius: 5, justifyContent: "center"}}
         >
           Clear
         </button>
@@ -84,11 +84,11 @@ function App() {
               <div
                 key={product.id}
                 style={{
-                  border: "1px solid #e0e0e0",
+                  border: "1px solid gold",
                   padding: 12,
-                  width: 220,
+                  width: 200,
                   boxSizing: "border-box",
-                  borderRadius: 6,
+                  borderRadius: 5,
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
@@ -107,7 +107,7 @@ function App() {
                   ${product.price.toFixed(2)}
                 </p>
 
-                <p style={{ color: "#666", fontSize: 12, marginTop: 6 }}>
+                <p style={{ color: "light grey", fontSize: 12, marginTop: 6 }}>
                   {product.category}
                 </p>
               </div>
